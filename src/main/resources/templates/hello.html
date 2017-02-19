@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: common-header"></head>
+<body>
+	<div th:replace="common/menu :: common-menu"></div>
+	<div class="container">
+		<p th:text="'Hello, ' + ${name} + '!'" />
+		<p th:text="${message}" />
+	</div>
+
+</body>
+</html>

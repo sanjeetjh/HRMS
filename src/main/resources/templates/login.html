@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head th:replace="common/header :: common-header" ></head>
+<body onload='document.loginForm.username.focus();'>
+ <link href="/css/login.css" rel="stylesheet"></link>
+	<div class="container">
+
+      <form class="form-signin"  name='loginForm'  th:action="@{/login}"  method='POST' >
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">User Name</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="User Name"  name='username' required="required" autofocus="autofocus"/>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name='password' required="required"/>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="remember-me" id="remember-me" /> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+</body>
+</html>
